@@ -1,0 +1,21 @@
+{
+  "name": "GiooDev-puppet",
+  "version": "0.1.0",
+  "author": "Julien Georges",
+  "summary": "Puppet module to Install & configure Puppet Server/Client from official repository.",
+  "license": "Apache 2.0",
+  "source": "https://github.com/GiooDev/puppetm-puppet",
+  "project_page": "https://github.com/GiooDev/puppetm-puppet",
+  "issues_url": "https://github.com/GiooDev/puppetm-puppet/issues",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemmajrelease": [ "6", "7" ]
+    }
+  ],
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 4.5.0"},
+    {"name":"puppetlabs-concat","version_requirement":">= 1.2.0"}
+  ]
+}
+
