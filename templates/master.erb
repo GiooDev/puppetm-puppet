@@ -1,0 +1,17 @@
+[master]
+    reports = store,log
+<% if @passenger %>
+    # Passenger settings
+    always_cache_features = true
+    ssl_client_header = SSL_CLIENT_S_DN
+    ssl_client_verify_header = SSL_CLIENT_VERIFY<% end %>
+<% if @environmentpath %>
+    environmentpath = <%= @environmentpath %><% end %>
+<% if @certname %>
+    certname = <%= @certname %><% end %>
+<% if @dns_alt_names %>
+    dns_alt_names = <%= @dns_alt_names %><% end %>
+<% if @external_nodes %>
+    # External Node Classifier settings
+    node_terminus = exec
+    external_nodes = <%= @external_nodes %><% end %>
