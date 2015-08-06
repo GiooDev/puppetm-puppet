@@ -25,7 +25,9 @@ class puppet::server (
         order   => '30',
     } ->
     # We first need to start the puppetmaster to generate the ssl certs
-    exec { '/bin/systemctl restart puppetmaster; /usr/bin/sleep 10':
+    exec { 'create_server_certificates':
+        command => '/bin/systemctl restart puppetmaster;
+                    /usr/bin/sleep 10',
         unless  => "/bin/ls ${ssldir}/private_keys/${certname}.pem",
         require => Class['puppet::config'],
     } ->
