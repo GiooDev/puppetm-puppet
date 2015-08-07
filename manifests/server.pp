@@ -7,15 +7,22 @@
 # Julien Georges
 #
 class puppet::server (
-    $enable          = true,
-    $ensure          = 'running',
+    $passenger       = false,
     $environmentpath = '$confdir/environments',
     $external_nodes  = '/usr/local/bin/puppet_node_classifier',
-    $passenger       = false,
     $certname        = $::fqdn,
     $dns_alt_names   = undef,
     $ca_master       = true,
 ) inherits puppet {
+
+    # If we enable passenger mode, we must stop puppetmaster service
+    if $passenger {
+        $enable = false
+        $ensure = 'stopped'
+    }else{
+        $enable = true
+        $ensure = 'running'
+    }
 
     package { 'puppet-server':
         ensure => present,
