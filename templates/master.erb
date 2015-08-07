@@ -7,6 +7,7 @@
     ssl_client_verify_header = SSL_CLIENT_VERIFY
 <% end %>
 <% if @environmentpath %>    environmentpath = <%= @environmentpath %><% end %>
+    ca = <%= @ca_master %>
 <% if @certname %>    certname = <%= @certname %><% end %>
 <% if @dns_alt_names %>    dns_alt_names = <%= @dns_alt_names %><% end %>
 <% if @external_nodes %>

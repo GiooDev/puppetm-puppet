@@ -14,6 +14,7 @@ class puppet::server (
     $passenger       = false,
     $certname        = $::fqdn,
     $dns_alt_names   = undef,
+    $ca_master       = true,
 ) inherits puppet {
 
     package { 'puppet-server':
