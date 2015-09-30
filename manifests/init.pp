@@ -35,6 +35,7 @@
 #        external_nodes  => '/usr/local/bin/puppet_node_classifier',
 #        certname        => 'puppet',
 #        dns_alt_names   => 'puppetmaster01,puppetmaster01.example.com,puppet,puppet.example.com',
+#        ssldir          => '/var/lib/puppet/ssl_master',
 #    }
 #
 # === Authors

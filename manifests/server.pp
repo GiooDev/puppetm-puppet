@@ -13,6 +13,7 @@ class puppet::server (
     $certname        = $::fqdn,
     $dns_alt_names   = undef,
     $ca_master       = true,
+    $ssldir          = undef,
 ) inherits puppet {
 
     # If we enable passenger mode, we must stop puppetmaster service
