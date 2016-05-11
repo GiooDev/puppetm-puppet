@@ -44,11 +44,12 @@
 #
 # === Copyright
 #
-# Copyright 2015 Julien Georges
+# Copyright 2016 Julien Georges
 #
 class puppet (
-    $ssldir     = '/var/lib/puppet/ssl',
-    $repository = true,
+    $ssldir        = '/var/lib/puppet/ssl',
+    $repository    = true,
+    $puppet_server = undef,
 ) {
 
     # Allow selection of repository configuration

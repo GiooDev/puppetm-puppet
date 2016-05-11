@@ -10,4 +10,8 @@
     # extension indicating the cache format is added automatically.
     # The default value is '$confdir/localconfig'.
     localconfig = $vardir/localconfig
+<% if @puppet_server -%>
 
+    # The puppet master server to request configurations from. Defaults to puppet
+    server = <%= @puppet_server %>
+<% end -%>
