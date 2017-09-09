@@ -14,6 +14,8 @@ class puppet::server (
     $dns_alt_names   = undef,
     $ca_master       = true,
     $ssldir          = undef,
+    $report          = undef,
+    $reports         = 'store,log',
 ) inherits puppet {
 
     # If we enable passenger mode, we must stop puppetmaster service

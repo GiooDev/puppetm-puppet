@@ -1,5 +1,6 @@
 [master]
-    reports = store,log
+<% if @report %>    report = <%= @report %><% end %>
+<% if @reports %>    reports = <%= @reports %><% end %>
 <% if @passenger %>
     # Passenger settings
     always_cache_features = true
